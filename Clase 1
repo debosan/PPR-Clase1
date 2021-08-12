@@ -1,0 +1,76 @@
+"Al objeto 1, le mando un mensaje +, y un argumento con valor 1"
+1 + 1.
+"Al objeto 2, le mando un mensaje *, y un argumento con valor 5"
+2 * 5. "Mensaje binario"
+'cad1','cad2'. "Mensaje binario"
+
+Time now. "Mensaje Unario"
+1000 factorial. 
+OrderedCollection new.
+
+Transcript clear.
+Transcript show: 'Hola Mundooo ' , String cr. "Show: Mensaje de palabra clave"
+" la , es un mensaje (coma)"
+Transcript show: (1 + 1) asString , String cr.
+"Sin los paarentesis y sin asString nos salta error"
+Transcript show: 'PPR ' , String cr.
+
+25 between: 1 and: 26. "Mensaje de palabra clave, palabra clave: and y between"
+
+5 to: 10. "Mensaje de palabra clave. PC: to. Genera un vectorcito"
+
+Transcript show: 'Debo', 'Sandoval', 'PPR 2K11'. "Se pone todo en una sola linea"
+
+Transcript clear
+			  show: 'Debo'; cr;
+			  show: 'Sandoval'; cr;
+			  show: 'PPR 2K11'. "Se pone todo en dif lineas"
+
+
+25 between: 10 + 3 factorial and: 5 factorial + 3
+"  Presedencia:
+1- Izquierda a derecha
+2- Unario
+3- Binario
+4- Palabra clave
+
+Por eso de beria resolver asi:
+3 factorial
+5 factorial
+queda: 25 between: 10 + 6 and: 120 + 3
+
+Pasa a resolver los binarios
+10 + 6
+120 + 6
+queda: 25 between: 16 and: 123 
+
+Y por ultimo los mensajes de palabra clave  " 
+
+|edad| 
+
+"Se crea la variable entre pipes, se puede reutilizar la variable con el dato que quieras"
+
+edad := 40. "Aca se define la variable"
+edad = 30. "Aca se comprueba si es true o false" 
+
+edad := OrderedCollection new.
+
+edad := nil. "Deja vacia la variable, el vaciono es objeto"
+
+"Cuando le queremos decir al SmallTalk que le queremos pasar como argumento una sentencia a un metodo, usamos corchetes [  ] "
+
+(1 = 1) = false ifTrue: [ Transcript clear ; show: 'Comparacion Verdadera' ]
+					ifFalse: [ Transcript clear; show: 'Comparacion Falsa' ].
+
+
+
+edad := 20.
+edad < 30 ifTrue: [ Transcript clear; show: 'Es menor a 30' ]
+			ifFalse: [ Transcript clear; show: 'Es mayor a 30' ].
+			
+1 to: 10 do: [ :index | Transcript show: index ; cr ].
+
+"El do funciona como un for, itera sobre los elementos de la coleccion, toma una variable que se llama index (o pepe o como quieras), esta apunta al elemento y hace lo que le pedi mediante la pipe o tuberia, en este caso solo le pedi quemuestre index, que en cada iteracion es el numero"
+
+1 to: 10 do: [ :index | Transcript show: 'aguante el '; 
+											 show: index ; cr ].
